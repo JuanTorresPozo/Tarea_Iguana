@@ -1,0 +1,80 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+body{
+    font-family: "Raleway", sans-serif;
+    width: 1280px;
+    color: #000000;
+}
+h1 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.encabezado {
+    padding: 20px;
+    background-color: #000000;
+    height: 73px;
+    text-align: center;
+}
+.explicacion {
+    background-color: black;
+    height: 348px;
+    padding: 76px, 150px, 75px, 150px;
+}
+.parrafo {
+    width: 475px;
+    height: 197px;
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin: 76px 106px 75px 150px;
+}
+.iguana1 {
+    width: 399px;
+    height: 237px;
+    vertical-align: middle;
+}
+.iconos {
+    background-color: #1E1A13;
+    height: 348px;
+    text-align: center;
+    color: #ffffff;
+}
+h2 {
+    color: #ffffff;
+    padding-top: 75px;
+}
+
+.fotos {
+    background-color: #000000;
+    height: 202px;
+    padding-top: 73px;
+    padding-bottom: 73px;
+    
+}
+.iguana2 {
+    width: 316px;
+    height: 202px;
+    display: inline-block;
+    margin-left: 150px;
+    
+}
+.iguana3 {
+    width: 316px;
+    height: 202px;
+    display: inline-block;
+    margin-left: 16px;
+    margin-right: 16px;
+    
+}
+.iguana4 {
+    width: 316px;
+    height: 202px;
+    display: inline-block;
+}
+
+

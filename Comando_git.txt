@@ -1,0 +1,118 @@
+pwd muestra la ruta donde estamos posicionados
+(print working directory)
+ls  listar todos archivo y carpetas donde estamos posicionados
+ls -l listar todos archivo y carpetas, con detalles
+ls -la -> listar TODOS los archivo y carpetas (incluidos los ocultos) con informacion
+d rwx r-x r-y -> r= read; w= write; x= execute
+
+clear -> limpiar la terminal (control l)
+cd nombre_carpeta o cd path ->ingresar a la carpeta
+cd.. volver un directorio atras atras
+cd e (tecla tabular)
+************ Manejo de archivos ******
+touch nombre_archivo.extencion -> crea un archivo
+echo "# ejemplo1_g7" >> archivo.txt --> permite escribir dentro de un archivo
+mkdir nombre_carpeta -> crear un directorio
+cp nombre_archivo.extencion directorio -> copiar un archivo dentro de un directorio
+cp -r nombre_carpeta directorio_destino -> copia el contenido 
+
+mkdir ejercicio1/ ejercicio1/assets ejercicio1/assets/css ejercicio1/assets/js ejercicio1/assets/img --> crea estructura de carpetas
+
+mv nombre_carpeta directorio_destino -> mover a directorio
+mv nombre_carpeta../ -> mover a director anterior 
+
+rm nombre_archivo.extencion
+rm rf nombre_direction -> borrar directorio y todo su contenido
+
+
+/*************** GIT ***********/
+git -- -> conocer version instalada de git
+
+git config --global user.name " Juan Torres" --> una sola vez en el computador en que se va a trabajar
+git config --global user.email "juantorresp@gmail.com" --> una sola vez en el computador en que se va a trabajar
+
+git config --list -> ver datos configurados
+
+git init -> inicializar git en el proyecto
+/********** SOLO LA PRIMERA VEZ **************/
+echo "# ejemplo1_g7" >> README.md 
+git init
+git add . --> añadir TODOS los archivos al versionamiento
+git commit -m "first commit" --> agrega descripcion y confirma localmente
+ -M main --> crea una nueva rama llamada main
+git remote add origin https://github.com/JuanTorresPozo/ejemplo1_g7.git  --> vincular con nuestro repositorio en la nube
+git push -u origin main --> envia al repositorio
+
+/********desde la segunda vez**********/
+git pull --> bajar cualquier archivo o cambio que no tengamos localmente en nuestro equipo
+git add .
+git commit -m "Se entrega estructura bas al html"
+gir push -u origin main envio al repositorio (a la ruta origin a la rama main)
+git log --> entrega informacion sobre los commit realizados (:q si queda pegado y quiero salir)
+git status --> entrega el estado del repositorio
+
+git remote --> ver los enlaces a repositorios
+git remote -v ..> ver las rutas de enlace
+git remote show origin --> muestra mas detalles (informativa)
+git clone ruta --> descarga en el equipo  proyecto del repositorio
+
+git remote rename nombre_inicial nuevo_ --> renombrar enlace
+
+git remote rm deisra --> eliminar el enlace del repositorio clonado
+
+
+
+git pull
+git pull -u origin main
+
+/************* BRANCH (Ramas) *****
+
+git branch -> conoce las ramas de nuestro proyecto
+git branch nombre_rama -> crear una nueva rama
+git checkout nombre_rama -> cambiar de rama
+
+git checkout -b nombre_nueva_rama -> crea y cambia inmediatamente de rama
+
+/******** STASH (reserva) ***********
+git stash -> aparta o reserva nuestros cambios a un lugar temporal
+git stash list -> aparta o reserva nuestros cambios a un lugar temporalmente
+git stash apply -> vuelve los cambios (se debe guardar en g7)
+git rebase main
+
+git bran -d rama_a_eliminar ->elimina rama localmente
+
+git push origin :rama_a_eliminar -> elimina rama en el repositorio
+git push origin -d rama_a_eliminar -> elimina rama en el repositorio
+
+https://github.com/learsixela/demo0045.git
+
+/*********  MERGE (pasar de la rama al main ) *****
+
+1.- en la rama actual realizar
+  git add .  
+  git commit -m "se agrega bootstrap" en la rama en que se trabajo (g7)
+
+2.- git checkout main -> volver a la rama a donde me voy a pasar (main)
+  git checkout main
+
+3.- git pull -> en la rama donde me voy a pasar (main) 
+
+4.- git merge g7 -> traer la informacion desde la otra rama
+   
+
+5.- git branch -D rama_a_eliminar ->eliminar ramas localmente 
+    git push origin :rama_a_eliminar -> elimina rama de el repositorio
+
+    git push origin -d rama_a_eliminar -> elimina rama de el repositorio
+
+
+echo "# Tarea_Iguana" >> README.md
+git init
+git add README.md
+git commit -m "Tarea_Iguana"
+git branch -M main
+git remote add origin https://github.com/JuanTorresPozo/Tarea_Iguana.git
+
+git remote add origin https://github.com/JuanTorresPozo/Tarea_Iguana.git
+git branch -M main
+git push -u origin main
